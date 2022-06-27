@@ -1,0 +1,26 @@
+#!/bin/bash
+>jeremy
+echo "Coller les bits ici:"
+IFS= read -d '' -n 1 bits
+while IFS= read -d '' -n 1 -t 0.1 c
+do
+    bits+=$c
+done
+echo
+echo ----------------------------------------------
+echo "C partisse"
+echo
+#echo $bits
+bi2=debut
+i=0
+fin= 
+while [ "$bi2" != "$fin" ]; do
+bi2=$(echo $bits|awk '{print $(('$i+2'))}  {print $(('$i+4'))}')
+((i=i+8))
+	if [[ $(echo $bi2 |awk '{print $1}'|sed s/\,//g) -gt 2499 ]] ;then
+	echo -n "--"$(echo $bi2|awk '{print $2}')" " >> jeremy
+	fi
+done
+echo >>jeremy
+./karuta $(cat jeremy)
+rm jeremy

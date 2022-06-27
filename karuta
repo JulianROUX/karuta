@@ -1,0 +1,421 @@
+#!/bin/bash
+
+#echo "Calculateur du seigneur"
+#echo
+#echo "Donner les bits avec la première lettre en utilisant '-' "
+#echo "ou avec '--' pour le mot entier"
+optspec=":eflmoquzb-:"
+while getopts "$optspec" optchar; do
+    case "${optchar}" in
+        -)
+            case "${OPTARG}" in
+bone)
+bone=1
+;;
+clay)
+clay=1
+;;
+copper)
+copper=1
+;;
+essence)
+essence=1
+;;
+flower)
+flower=1
+;;
+ice)
+ice=1
+;;
+iron)
+iron=1
+;;
+leaf)
+leaf=1
+;;
+magma)
+magma=1
+;;
+oil)
+oil=1
+;;
+quartz)
+quartz=1
+;;
+salt)
+salt=1
+;;
+stone)
+stone=1
+;;
+sugar)
+sugar=1
+;;
+uranium)
+uranium=1
+;;
+wax)
+wax=1
+;;
+wood)
+wood=1
+;;
+wool)
+wool=1
+;;
+zinc)
+zinc=1
+;;
+                *)
+                    if [ "$OPTERR" = 1 ] && [ "${optspec:0:1}" != ":" ]; then
+                        echo "connais pas --${OPTARG}" >&2
+			echo "Calculateur du seigneur"
+			echo
+			echo "Donner les bits avec la première lettre en utilisant '-' "
+			echo "ou avec '--' pour le mot entier"
+                    fi
+                    ;;
+            esac;;
+
+        b)
+            bone=1
+            ;;
+        e)
+            essence=1
+            ;;
+        f)
+            flower=1
+            ;;
+        l)
+            leaf=1
+            ;;
+        m)
+            magma=1
+            ;;
+        oil)
+            oil=1
+            ;;
+        q)
+            quartz=1
+            ;;
+        u)
+            uranium=1
+            ;;
+        z)
+            zinc=1
+            ;;
+	*)
+            if [ "$OPTERR" != 1 ] || [ "${optspec:0:1}" = ":" ]; then
+                echo "Cet argument n'existe pas: '-${OPTARG}'" >&2
+		echo "Calculateur du seigneur"
+                echo
+                echo "Donner les bits avec la première lettre en utilisant '-' "
+                echo "ou avec '--' pour le mot entier"
+            fi
+            ;;
+    esac
+done
+#frame 2
+if (( copper == 1 && zinc == 1 ));then
+echo frame 2 possible
+fi
+#frame 3
+ if (( stone == 1 && wood == 1 ));then
+echo frame 3 possible
+fi
+#frame 4
+if (( flower == 1 && quartz == 1 ));then
+echo frame 4 possible
+fi
+#frame 5
+ if (( copper == 1 && magma == 1 ));then
+echo frame 5 possible
+fi
+#frame 6
+ if (( flower == 1 && wood == 1 ));then
+echo frame 6 possible
+fi
+#frame 7
+ if (( bone == 1 && wood == 1 ));then
+echo frame 7 possible
+fi
+#frame 8
+ if (( bone == 1 && zinc == 1 ));then
+echo frame 8 possible
+fi
+#frame 9
+ if (( quartz == 1 && stone == 1 ));then
+echo frame 9 possible
+fi
+#frame 10
+ if (( iron == 1 && uranium == 1 ));then
+echo frame 10 possible
+fi
+#frame 11
+ if (( iron == 1 && wood == 1 ));then
+echo frame 11 possible
+fi
+#frame 12
+ if (( essence == 1 && wood == 1 ));then
+echo frame 12 possible
+fi
+#frame 13
+ if (( essence == 1 && zinc == 1 ));then
+echo frame 13 possible
+fi
+#frame 14
+ if (( magma == 1 && uranium == 1 ));then
+echo frame 14 possible
+fi
+#frame 15
+ if (( ice == 1 && wood == 1 ));then
+echo frame 15 possible
+fi
+#frame 16
+ if (( ice == 1 && sugar == 1 ));then
+echo frame 16 possible
+fi
+#frame 17
+ if (( bone == 1 && wool == 1 ));then
+echo frame 17 possible
+fi
+#frame 18
+ if (( essence == 1 && wool == 1 ));then
+echo frame 18 possible
+fi
+#frame 19
+ if (( flower == 1 && zinc == 1 ));then
+echo frame 19 possible
+fi
+#frame 20
+ if (( essence == 1 && uranium == 1 ));then
+echo frame 20 possible
+fi
+#frame 21
+ if (( quartz == 1 && wool == 1 ));then
+echo frame 21 possible
+fi
+#frame 22
+ if (( iron == 1 && zinc == 1 ));then
+echo frame 22 possible
+fi
+#frame 23
+ if (( flower == 1 && stone == 1 ));then
+echo frame 23 possible
+fi
+#frame 24
+ if (( magma == 1 && stone == 1 ));then
+echo frame 24 possible
+fi
+#frame 25
+ if (( leaf == 1 && sugar == 1 ));then
+echo frame 25 possible
+fi
+#frame 26
+ if (( leaf == 1 && flower == 1 ));then
+echo frame 26 possible
+fi
+#frame 27
+ if (( leaf == 1 && stone == 1 ));then
+echo frame 27 possible
+fi
+#frame 28
+ if (( copper == 1 && quartz == 1 ));then
+echo frame 28 possible
+fi
+#frame 29
+ if (( salt == 1 && zinc == 1 ));then
+echo frame 29 possible
+fi
+#frame 30
+ if (( salt == 1 && ice == 1 ));then
+echo frame 30 possible
+fi
+#frame 31
+ if (( ice == 1 && wool == 1 ));then
+echo frame 31 possible
+fi
+#frame 32
+ if (( uranium == 1 && zinc == 1 ));then
+echo frame 32 possible
+fi
+#frame 33
+ if (( quartz == 1 && wool == 1 ));then
+echo frame 33 possible
+fi
+#frame 34
+ if (( copper == 1 && wood == 1 ));then
+echo frame 34 possible
+fi
+#frame 35
+ if (( bone == 1 && leaf == 1 ));then
+echo frame 35 possible
+fi
+#frame 36
+ if (( bone == 1 && iron == 1 ));then
+echo frame 36 possible
+fi
+#frame 37
+ if (( leaf == 1 && wood == 1 ));then
+echo frame 37 possible
+fi
+#frame 38
+ if (( essence == 1 && sugar == 1 ));then
+echo frame 38 possible
+fi
+#frame 39
+ if (( copper == 1 && stone == 1 ));then
+echo frame 39 possible
+fi
+#frame 40
+ if (( leaf == 1 && quartz == 1 ));then
+echo frame 40 possible
+fi
+#frame 41
+ if (( essence == 1 && salt == 1 ));then
+echo frame 41 possible
+fi
+#frame 42
+ if (( ice == 1 && quartz == 1 ));then
+echo frame 42 possible
+fi
+#frame 43
+ if (( clay == 1 && stone == 1 ));then
+echo frame 43 possible
+fi
+#frame 44
+ if (( clay == 1 && flower == 1 ));then
+echo frame 44 possible
+fi
+#frame 45
+ if (( wool == 1 && flower == 1 ));then
+echo frame 45 possible
+fi
+#frame 46
+ if (( clay == 1 && copper == 1 ));then
+echo frame 46 possible
+fi
+#frame 47
+ if (( essence == 1 && iron == 1 ));then
+echo frame 47 possible
+fi
+#frame 48
+ if (( stone == 1 && iron == 1 ));then
+echo frame 48 possible
+fi
+#frame 49
+ if (( bone == 1 && magma == 1 ));then
+echo frame 49 possible
+fi
+#frame 50
+ if (( salt == 1 && sugar == 1 ));then
+echo frame 50 possible
+fi
+#frame 51
+ if (( salt == 1 && bone == 1 ));then
+echo frame 51 possible
+fi
+#frame 52
+ if (( essence == 1 && bone == 1 ));then
+echo frame 52 possible
+fi
+#frame 53
+ if (( ice == 1 && uranium == 1 ));then
+echo frame 53 possible
+fi
+#frame 54
+ if (( ice == 1 && leaf == 1 ));then
+echo frame 54 possible
+fi
+#frame 55
+ if (( ice == 1 && flower == 1 ));then
+echo frame 55 possible
+fi
+#frame 56
+ if (( sugar == 1 && bone == 1 ));then
+echo frame 56 possible
+fi
+#frame 57
+ if (( sugar == 1 && wax == 1 ));then
+echo frame 57 possible
+fi
+#frame 58
+ if (( sugar == 1 && quartz == 1 ));then
+echo frame 58 possible
+fi
+#frame 59
+ if (( essence == 1 && wax == 1 ));then
+echo frame 59 possible
+fi
+#frame 60
+ if (( bone == 1 && oil == 1 ));then
+echo frame 60 possible
+fi
+#frame 61
+ if (( oil == 1 && wool == 1 ));then
+echo frame 61 possible
+fi
+#frame 62
+ if (( oil == 1 && flower == 1 ));then
+echo frame 62 possible
+fi
+#frame 63
+ if (( wax == 1 && uranium == 1 ));then
+echo frame 63 possible
+fi
+#frame 64
+ if (( ice == 1 && stone == 1 ));then
+echo frame 64 possible
+fi
+#frame 65
+ if (( salt == 1 && wood == 1 ));then
+echo frame 65 possible
+fi
+#frame 66
+ if (( essence == 1 && stone == 1 ));then
+echo frame 66 possible
+fi
+#frame 67
+ if (( salt == 1 && wool == 1 ));then
+echo frame 67 possible
+fi
+#frame 68
+ if (( bone == 1 && clay == 1 ));then
+echo frame 68 possible
+fi
+#frame 69
+ if (( clay == 1 && wood == 1 ));then
+echo frame 69 possible
+fi
+#frame 70
+ if (( clay == 1 && magma == 1 ));then
+echo frame 70 possible
+fi
+#frame 71
+ if (( leaf == 1 && salt == 1 ));then
+echo frame 71 possible
+fi
+#frame 72
+ if (( essence == 1 && salt == 1 ));then
+echo frame 72 possible
+fi
+#frame 73
+ if (( oil == 1 && quartz == 1 ));then
+echo frame 73 possible
+fi
+#frame 74
+ if (( oil == 1 && stone == 1 ));then
+echo frame 74 possible
+fi
+#frame 75
+ if (( oil == 1 && zinc == 1 ));then
+echo frame 75 possible
+fi
+#frame 76
+ if (( quartz == 1 && wax == 1 ));then
+echo frame 76 possible
+fi
+#frame 77
+ if (( bone == 1 && zinc == 1 ));then
+echo frame 77 possible
+fi
